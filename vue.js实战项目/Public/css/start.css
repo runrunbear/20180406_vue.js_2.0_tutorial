@@ -1,0 +1,146 @@
+.shareImg{
+    background:url('../img/launch_ptop.jpg');
+}
+.img-body{
+
+}
+.hartShare{
+    width:470px;
+    height:190px;
+    line-height:190px;
+    top:103px;
+    left:50%;
+    margin:100px auto 100px;
+    color:#fff;
+    text-align:center;
+}
+.hartShare h1{
+    font-weight:bold;
+}
+.hartShare h6{
+    font-size:18px;
+    line-height:28px;
+    padding:56px 0 30px;
+}
+
+.share-agree{
+    width:338px;
+    overflow:hidden;
+    margin-left:75px;
+    margin-top:-50px;
+}
+.seton{
+    background:url('../img/icon.png') 0 -58px no-repeat;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    float:left;
+    margin-right:1px;
+    margin-top:86px;
+    cursor:pointer;
+}
+.realize a{
+    color:#F0AD4E;
+    text-decoration:underline;
+}
+
+
+.login-btn{
+    width:125px;
+    margin:5px 26px 0 65px;
+}
+.getpw{
+    color:#E67D02;
+    vertical-align:middle;
+}
+.shell{
+    width:100%;
+    margin-top:10px;
+}
+.shell .fond{
+    height:2px;
+    width:38%;
+    display:inline-block;
+    border-top:1px solid #aaa;
+    vertical-align:middle;
+    margin-right:3px;
+}
+.back{
+    height:2px;
+    width:38%;
+    display:inline-block;
+    border-top:1px solid #aaa;
+    vertical-align:middle;
+    margin-left:3px;
+}
+.parter{
+    margin:15px 150px;
+}
+.parter img{
+    margin:6px;
+}
+.noneLog{
+    margin:0 48px 20px;
+}
+.noneLog a{
+    color:#E67D02;
+}
+.idear-part{
+    margin:20px 250px;
+    text-align:center;
+}
+.community{
+    width:136px;
+    display:inline-block;
+}
+.record1{
+    margin-top:34px;
+    margin-left:20px;
+    display:inline-block;
+    width:40px;
+    height:41px;
+    background:url('../img/launch_left1.png') no-repeat center center;
+}
+.record2{
+    margin-top:34px;
+    margin-left:20px;
+    display:inline-block;
+    width:47px;
+    height:41px;
+    background:url('../img/launch_left2.png') no-repeat center center;
+}
+.record3{
+    margin-top:28px;
+    margin-left:20px;
+    display:inline-block;
+    width:48px;
+    height:47px;
+    background:url('../img/launch_left3.png') no-repeat center center;
+}
+.jquery{
+    margin-top:20px;
+    display:block;
+    width:20%;
+    margin-left:19em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .small-img-container {
+        line-height: 1.8em;
+    }
+
+}

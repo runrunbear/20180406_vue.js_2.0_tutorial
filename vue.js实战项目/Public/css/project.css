@@ -1,0 +1,90 @@
+input[type='text']{
+    width:25px;height:15px;padding:5px 3px;margin:5px 0;border:1px solid #ff9966;
+}
+.box{
+    margin-top:10px;
+    color:#333;
+}
+
+#header{
+    height:61px;
+    margin-bottom:20px;
+}
+.firstpag{
+    border-bottom:1px solid #D1D1D1;
+    box-shadow:0 0 10px #D1D1D1;
+}
+.project_left{
+    width:170px;
+    border:1px solid #000;
+}
+.normal{
+    margin-top:60px;
+}
+.help{
+    color:#37cb58;
+    background:#3b3b3b;
+    height:41px;
+    padding:0 23px;
+    font-size:16px;
+    line-height:41px;
+    margin:0;
+}
+.about{
+    background:#2f2f2f;
+    padding:6px 0;
+    list-style: none;
+    margin:0;
+}
+.about li{
+    margin:5px;
+    padding:0 21px;
+}
+.about li a{
+    color:#ccc;
+}
+.project_detail{
+    padding:30px;
+    border:1px solid #aaa;
+    background:#fff;
+}
+.login-btn{
+    width:125px;
+    margin:5px 26px 0 65px;
+}
+.getpw{
+    color:#E67D02;
+    vertical-align:middle;
+}
+.shell{
+    width:100%;
+    margin-top:10px;
+}
+.shell .fond{
+    height:2px;
+    width:38%;
+    display:inline-block;
+    border-top:1px solid #aaa;
+    vertical-align:middle;
+    margin-right:3px;
+}
+.back{
+    height:2px;
+    width:38%;
+    display:inline-block;
+    border-top:1px solid #aaa;
+    vertical-align:middle;
+    margin-left:3px;
+}
+.parter{
+    margin:15px 150px;
+}
+.parter img{
+    margin:6px;
+}
+.noneLog{
+    margin:0 48px 20px;
+}
+.noneLog a{
+    color:#E67D02;
+}

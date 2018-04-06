@@ -1,0 +1,117 @@
+<extend name="Public:header"/>
+<block name="title">梦想详情页</block>
+<block name="detail">
+<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/daohang.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/detail.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/dream.css"/>
+    <body>
+<div id="header"></div>
+    <div class="main leader">
+        <div class="container">
+            <div class="row chWork">
+                <div class="col-md-12">
+                    <h3>{$detail['xtitle']}</h3>
+                    <h5>梦想发起者：{$detail['username']}</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4 class="introduce">梦想介绍</h4>
+                </div>
+            </div>
+            <div class="row dreamDetail">
+                <div class="col-md-8 img-right">
+                    <div class="main-image">
+                        <!-- <img class="img-responsive" src="__PUBLIC__/img/FoUBP0TAH9ESOIy4-Y2jzdIy2XVh.jpg"/> -->
+                    </div>
+                    <div class="text-content">
+                        <img class="img-responsive" src="__PUBLIC__/Uploads/{$detail.xpic}" width="700px" height="400px"/>
+                        <p>生活舒适的我们，内心总有一种躁动</p>
+                        <h4>【{$detail['xtitle']}】</h4>
+                        <p>
+                        	{$detail['xdetail']}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 right-content">
+                    <section class="right-content">
+                       <div class="pull-left">
+                           <img class="img-responsive" src="__PUBLIC__/img/zero.jpg"/>
+                       </div>
+                        <div class="pull-left">
+                            <p class="dleader">梦想发起人:</p>
+                            <p class="writer">{$detail['username']}</p>
+                        </div>
+                    </section>
+                    <div class="motto">
+                        <p>梦想格言：{$detail['xtitle']}</p>
+                    </div>
+                    <a class="btn btn-danger btn-lg mood glyphicon glyphicon-heart" href="__APP__/Home/Dream/support/id/{$detail['id']}"> <span>支持</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- <footer id="foot"></footer> -->
+
+<!--固定定位的登录模态框-->
+<div class="modal" id="modal-login">
+    <div class="modal-dialog modal-sm">
+
+        <div class="container">
+            <div class="col-md-6">
+
+                <div class="modal-content">
+                    <div class="modal-header">用户登录</div>
+                    <div class="modal-body">
+
+                        <form class="user-login" method="post" action="__APP__/Home/Login/denglu">
+                            <div class="form-group">
+                                <lable for="uname" class="control-label">用户名：</lable>
+                                <input autofocus required placeholder="请输入用户名" class="form-control" id="uname" name="xname"/>
+                            </div>
+                            <div class="form-group">
+                                <lable for="upwd" class="control-lable">密码：</lable>
+                                <input type="password" required placeholder="请输入密码" class="form-control" id="upwd" name="xpwd"/>
+                            </div>
+
+                        <h5 class="name-err">*用户名或密码错误</h5>
+                        <input id='start_login' type="submit" class="btn btn-danger login-btn" value="登录"/>
+                        <a href="#" class="getpw">忘记密码</a>
+                        
+                        <div class="shell">
+                            <b class="fond"></b>
+                            合作账号登录
+                            <b class="back"></b>
+                        </div>
+                        <div class="parter">
+                            <img src="__PUBLIC__/img/nir1.png">
+                            <img src="__PUBLIC__/img/nir2.png">
+                            <img src="__PUBLIC__/img/nir3.png">
+                        </div>
+
+                        <div class="noneLog">
+                            没有账号？
+                            <a href="__APP__/Home/Index/zhuce">快速注册</a>
+                        </div>
+                    </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="__PUBLIC__/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/js/bootstrap.js"></script>
+<!-- <script src="__PUBLIC__/js/first.js"></script> -->
+<script src="__PUBLIC__/js/login.js"></script>
+<script src="__PUBLIC__/js/gundong.js"></script>
+</block>

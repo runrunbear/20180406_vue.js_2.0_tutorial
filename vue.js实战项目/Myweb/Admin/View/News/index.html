@@ -1,0 +1,42 @@
+<extend name="Index:shouye"/>
+<block name="indexnews">
+<div class="col-sm-12" style="margin-top:20px;">
+        <section class="panel">
+        
+      <table id="dynamic-table" class="display table table-bordered table-striped dataTable" aria-describedby="dynamic-table_info">
+        <thead>
+        <tr role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 195px;" aria-label="Rendering engine: activate to sort column ascending">ID</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 290px;" aria-label="Browser: activate to sort column ascending">新闻主题</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 290px;" aria-label="Browser: activate to sort column ascending">新闻类别</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 267px;" aria-label="Platform(s): activate to sort column ascending">描述</th><th class="hidden-phone sorting_desc" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 115px;" aria-sort="descending" aria-label="CSS grade: activate to sort column ascending">操作</th></tr>
+        </thead>
+
+        <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <foreach name="news" item="row" >    
+        <tr class="gradeA odd" >
+            <td class=" ">{$row['id']}</td>
+            <td class=" ">{$row['title']}</td>
+            <td class=" ">{$cate[$row['cates']]}</td>
+            <td class=" " ><div style="height:70px; overflow:auto;">{$row['content']}</div></td>
+            <td class="center hidden-phone  sorting_1"><a href="__APP__/Admin/News/edit/id/{$row['id']}">修改</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick=fun({$row['id']})>删除</a></td>
+        </tr>
+        </foreach>
+
+    </tbody></table>
+        <div style="margin-left:500px;">{$page}</div>
+        </section>
+        </div>
+         <script src="__PUBLIC__/admin/js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript">
+              function fun(id){
+                    if(confirm("确定要删除吗?")){
+                        $.get("__APP__/Admin/News/delete",{id:id},function(data){
+                                if(data==1){
+                                    alert("删除成功");
+                                    document.location="__APP__/Admin/News/index";
+                                }
+                        })
+                    }
+                    
+              }
+
+              
+        </script>
+</block>

@@ -1,0 +1,77 @@
+.leader{
+    background:#EFF2EC;
+}
+.chWork h3{
+    font-weight:bold;
+    text-align:center;
+    margin-top:20px;
+}
+.chWork h5{
+    text-align:center;
+    margin:10px;
+}
+.introduce{
+    font-weight:bold;
+    border-bottom:3px solid #FFA400;
+    text-align:center;
+    width:110px;
+    margin-left:20px;
+    padding-bottom:7px;
+}
+.dreamDetail{
+    border:1px solid #ccc;
+    box-shadow:0 0 0 4px #e6e7e0;
+    padding:30px 10px 30px 30px;
+    border-radius:4px;
+    background:#fff;
+    min-height:100px;
+    overflow:hidden;
+}
+.img-right{
+    border-right:1px solid #eee;
+    padding-right:59px;
+    padding-left:0;
+}
+.text-content p{
+    text-indent: 2em;
+    margin:8px;
+    color:#282828;
+}
+.text-content h4{
+    font-weight:bold;
+    margin:25px 0;
+}
+.right-content{
+    overflow:hidden;
+    padding:15px 0 0 20px;
+}
+.right-content img{
+    width:150px;
+    height:100px;
+}
+.dleader{
+    margin-top:10px;
+    font-size:16px;
+}
+.writer{
+    margin-top:7px;
+    font-size:18px;
+    color:#FFAD1B;
+}
+.motto{
+    font-size:16px;
+}
+.mood{
+    margin-top:15px;
+    margin-left:30px;
+    width:100px;
+    height:2.5em;
+    line-height:1.25em;
+    border:none;
+    border-bottom:3px solid #712929;
+    vertical-align:middle;
+}
+.mood:hover{
+    border-bottom:2px solid #712929;
+    border-top:1px solid transparent;
+}

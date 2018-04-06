@@ -1,0 +1,94 @@
+<extend name="Public:header"/>
+<block name="title">个人中心</block>
+<block name="center">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/daohang.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/detail.css"/>
+<body>
+<!-- <div id="header"></div> -->
+<div class="main personBox">
+    <div class="container">
+        <div class="row" style="margin-top: 70px;">
+            <div class="col-md-2">
+                <ul class="message">
+                    <li><a href="#">我的发起</a></li>
+                    <li><a href="#">消息</a></li>
+                    <li><a href="#">设置</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div class="personRight">
+                    <div class="headBox">
+                        <div class="ftDiv">
+                            <a href="#"><img class="img-responsive" src="__PUBLIC__/img/100.jpg" alt=""/>                             </a>
+                        </div>
+                        <div class="scDiv">
+                            <p class="ftp"><a href="#">{$_SESSION['xname']}</a></p>
+                            <p class="scp"></p>
+                        </div>
+                        <b></b>
+                    </div>
+
+                    <div class="messageBox">
+                        <a href="#">
+                          <p class="ftp letterNum">0</p>
+                          <p class="myNum">我的消息</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tabBox">
+                    <ul>
+                        <li>我的发起</li>
+                    </ul>
+                     <empty name="dream">
+                     	<div class="person_list">
+                        	 <div class="mask"></div>
+                       		 <p class="never">您还未发表过梦想</p>
+                       		 <a class="btn_start" href="__APP__/Home/Dream/index">去发表</a>
+                   		 </div>
+                     <else />
+                     	<div class="row">
+              	  <div class="col-md-4 col-sm-12 project-zero" style="width:1100px">
+                    <a class="link-muted" href="#">
+                    	<foreach name="dream" item="row">
+                        <dl style="float:left;margin-left:33px;border:1px solid #ccc;margin-top:10px;margin-bottom:10px;">
+                            <dt><a href="__APP__/Home/Dream/detail/id/{$row.id}"><img src="__PUBLIC__/Uploads/{$row.xpic}" width="100px" height="100px" style="width:320px;"/></a></dt>
+                            <dd>
+                                <h5><a href="__APP__/Home/Dream/detail/id/{$row.id}">{$row.xtitle}</a></h5>
+                                <div class="text-muted">
+                                    发起者：{$row.username}
+                                <span class="wh-star">
+                                    身份已提交
+                                </span>
+                                </div>
+                                <ul class="allSup">
+                                    <li style="width: 100px;">支持者:{$row.num}</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                         </foreach>
+                    </a>
+                </div>
+            </div>
+
+            <ol class="pager">
+                <li>{$page}</li>
+            </ol>
+                     	
+                     </empty> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------页尾-------------->
+<!-- <footer id="foot"></footer> -->
+<script src="__PUBLIC__/js/jquery-1.11.3.js "></script>
+<script src="__PUBLIC__/js/bootstrap.js "></script>
+<script src="__PUBLIC__/js/me.js"></script>
+<script src="__PUBLIC__/js/login.js"></script>
+</body>
+</block>

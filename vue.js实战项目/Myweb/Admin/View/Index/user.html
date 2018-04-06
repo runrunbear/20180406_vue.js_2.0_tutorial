@@ -1,0 +1,47 @@
+<extend name="Index:shouye"/>
+<block name="user">
+<div class="col-sm-12" style="margin-top:20px;">
+        <section class="panel">
+        
+      <table id="dynamic-table" class="display table table-bordered table-striped dataTable" aria-describedby="dynamic-table_info">
+        <thead>
+        <tr role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 195px;" aria-label="Rendering engine: activate to sort column ascending">ID</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 290px;" aria-label="Browser: activate to sort column ascending">用户名</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 267px;" aria-label="Platform(s): activate to sort column ascending">手机号</th><th class="hidden-phone sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 166px;" aria-label="Engine version: activate to sort column ascending">权限</th><th class="hidden-phone sorting_desc" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" style="width: 115px;" aria-sort="descending" aria-label="CSS grade: activate to sort column ascending">操作</th></tr>
+        </thead>
+
+        <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <foreach name="user" item="row" >    
+        <tr class="gradeA odd" class="del">
+            <td class=" ">{$row['xid']}</td>
+            <td class=" ">{$row['xname']}</td>
+            <td class=" ">{$row['xphone']}</td>
+            <td class="center hidden-phone ">{$status[$row['status']]}</td>
+            <td class="center hidden-phone  sorting_1"><a href="__APP__/Admin/User/edit/id/{$row['xid']}">修改</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick=fun({$row['xid']})>删除</a></td>
+        </tr>
+        </foreach>
+
+    </tbody></table>
+
+    <!-- <div class="row-fluid"><div class="span6"><div class="dataTables_info" id="dynamic-table_info">{$page}</div></div><div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul><li class="prev"><a href="#">上一页</a></li><li><a href="#">1</a></li>><li class="active"><a href="#">2</a></li><li class="next"><a href="#">下一页</a></li></ul></div></div></div></div>
+        </div>
+        </div> -->
+        <div style="margin-left:500px;">{$page}</div>
+
+        </section>
+        </div>
+        <script src="__PUBLIC__/admin/js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript">
+              function fun(id){
+                    if(confirm("确定要删除吗?")){
+                        $.get("__APP__/Admin/User/delete",{id:id},function(data){
+                                if(data==1){
+                                    alert("删除成功");
+                                    document.location="__APP__/Admin/User/index";
+                                }
+                        })
+                    }
+                    
+              }
+
+              
+        </script>
+       </block>

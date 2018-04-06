@@ -1,0 +1,155 @@
+<extend name="Public:header"/>
+<block name="title">梦想发表</block>
+<block name="dream">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/demo.css" />
+<!--必要样式-->
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/component.css" />
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/css/daohang.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/css/detail.css"/>
+	<style>
+		/*修改过样式*/
+		textarea{
+			border:none;
+			width:90%;
+			height:95%;
+			margin:-100px 34px;
+			background:#C9F2E8;
+			font-size:14px;
+			padding:15px;
+		}
+		.wenben{
+			margin-top:127px;
+		}
+		#preview{
+			margin-top:-50px;
+		}
+		#preview img{
+			background:url("__PUBLIC__/img/upload-btn.png") no-repeat;
+			display:inline-block;
+			width:56px;
+			height:56px;
+			background-position:0 0;
+			position:relative;
+			left:83px;
+			top:71px;
+		}
+		#preview span{
+			font-size:14px;
+			position:relative;
+			top:53px;
+			left:71px;
+		}
+
+	</style>
+
+<script src="__PUBLIC__/js/modernizr.custom.js"></script>
+
+</head>
+<body>
+<!-- <div id="header"></div> -->
+<section>
+	<form id="theForm" class="simform" autocomplete="on" method="post" action="__APP__/Home/Dream/dodream" enctype="multipart/form-data">
+		<div class="simform-inner">
+			<ol class="questions">
+				<li>
+					<span><label for="q1">梦想标题</label></span>
+					<input id="q1" name="xtitle" type="text" maxlength="25"/>
+					<div id="preview">
+						<span>添加图片</span>
+						<img  id="imghead" onClick="$('#previewImg').click();"/>
+					</div>
+					<input type="file" onChange="previewImage(this)" style="display:none" id="previewImg" name="xpic">
+				</li>
+				<li>
+					<span><label for="q2">详细的向大家介绍下你的梦想吧~</label></span>
+					<div class="wenben">
+						<textarea placeholder="以一个引人注目的描述为你的梦想开篇，让更多支持者愿意了解并且为你的梦想点赞" name="xdetail" cols="30" rows="6" id="q1" name="q2" type="text"></textarea>
+					</div>
+					<input class="btn btn-warning" type="submit" value="发表" style="width: 500px; height: 50px; margin-top: 50px; margin-left: 150px;">
+				</li>
+
+			</ol><!-- /questions -->
+			<button class="submit" type="submit">发表梦想</button>
+			<div class="controls">
+				<button class="next"></button>
+				<div class="progress"></div>
+				<span class="number">
+					<span class="number-current"></span>
+					<span class="number-total"></span>
+				</span>
+				<span class="error-message"></span>
+			</div><!-- / controls -->
+		</div><!-- /simform-inner -->
+		<span class="final-message"></span>
+	</form><!-- /simform -->
+</section>
+
+<!-- -----------页尾------------ -->
+<!-- <div id="foot"></div> -->
+
+
+<!--固定定位的登录模态框-->
+<div class="modal" id="modal-login">
+    <div class="modal-dialog modal-sm">
+
+        <div class="container">
+            <div class="col-md-6">
+
+                <div class="modal-content">
+                    <div class="modal-header">用户登录</div>
+                    <div class="modal-body">
+
+                        <form class="user-login" method="post" action="__APP__/Home/Login/denglu">
+                            <div class="form-group">
+                                <lable for="uname" class="control-label">用户名：</lable>
+                                <input autofocus required placeholder="请输入用户名" class="form-control" id="uname" name="xname"/>
+                            </div>
+                            <div class="form-group">
+                                <lable for="upwd" class="control-lable">密码：</lable>
+                                <input type="password" required placeholder="请输入密码" class="form-control" id="upwd" name="xpwd"/>
+                            </div>
+
+                        <h5 class="name-err">*用户名或密码错误</h5>
+                        <input id='start_login' type="submit" class="btn btn-danger login-btn" value="登录"/>
+                        <a href="#" class="getpw">忘记密码</a>
+                        
+                        <div class="shell">
+                            <b class="fond"></b>
+                            合作账号登录
+                            <b class="back"></b>
+                        </div>
+                        <div class="parter">
+                            <img src="__PUBLIC__/img/nir1.png">
+                            <img src="__PUBLIC__/img/nir2.png">
+                            <img src="__PUBLIC__/img/nir3.png">
+                        </div>
+
+                        <div class="noneLog">
+                            没有账号？
+                            <a href="__APP__/Home/Index/zhuce">快速注册</a>
+                        </div>
+                    </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="__PUBLIC__/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/classie.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/stepsForm.js"></script>
+<script src="__PUBLIC__/js/detail.js"></script>
+<script src="__PUBLIC__/js/bootstrap.js"></script>
+<script src="__PUBLIC__/js/index.js"></script>
+<script src="__PUBLIC__/js/login.js"></script>
+</body>
+</block>
